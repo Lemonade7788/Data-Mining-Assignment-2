@@ -1,4 +1,9 @@
 # Ignore all .log files
 *.log
+*.cfg
 # Ignore all files in any directory named temp
 venv/
+etc
+
+venv/
+Scripts
