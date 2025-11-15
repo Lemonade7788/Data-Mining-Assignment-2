@@ -7,8 +7,34 @@ df = pd.read_csv("MFGEmployees4.csv")
 df = df.dropna(subset=['DepartmentName', 'AbsentHours', 'Age'])
 
 # Page config
-st.set_page_config(layout="wide", page_title="Interactive MFG Dashboard")
-st.title("📊 Interactive MFG Employee Dashboard")
+st.set_page_config(layout="wide", page_title="Human Resource Dashboard")
+st.markdown(
+    """
+    <style>
+        .full-width-header {
+            width: 100vw;
+            margin-left: -50vw;
+            left: 50%;
+            position: relative;
+            background-color: #ffffff;
+            padding: 25px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-top: -40px;
+            margin-bottom: 30px;
+        }
+        .full-width-header h1 {
+            color: #1f77b4;
+            margin: 0;
+            font-size: 64px;
+        }
+    </style>
+    <div class="full-width-header">
+        <h1>📊 Human Resource Dashboard</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # Sidebar controls
 st.sidebar.header("🔧 Customize Dashboard")
